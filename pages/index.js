@@ -55,7 +55,7 @@ const Index = () => {
                       </div> */}
                     </div>
                     <div className="back">
-                    <div className="bb"></div>
+                    <div className="bb2"></div>
                       {/* <div className="image image-2">
                         <div className="hero-section-content">
                           <h2>React and Next is Amazing!</h2>

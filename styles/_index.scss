@@ -236,7 +236,7 @@ $path-width: 5px;
 $main-color: #f0c048;
 
 $codepen-logo-path: url('/images/myicon.png');
-
+$codepen-logo-path2: url('/images/myicon4.png');
 %full-fill {
   position: absolute;
   top: 0;
@@ -251,6 +251,35 @@ $codepen-logo-path: url('/images/myicon.png');
   height: $box-size;
   margin: auto;
   background: $codepen-logo-path no-repeat 50% / 80% rgba(#000, .1) ;
+  color: $main-color;
+
+  box-shadow: inset 0 0 0 1px rgba($main-color, .5);
+
+  &::before,
+  &::after {
+    @extend %full-fill;
+    content: '';
+    z-index: -1;
+    margin: -1 * $clip-distance * 100%;
+    box-shadow: inset 0 0 0 $path-width; 
+    animation: clipMe $anime-time linear infinite;
+  }
+
+  &::before {
+    animation-delay: $anime-time * -.5;
+  }
+
+  // for debug
+ 
+
+}
+
+.bb2 {
+  @extend %full-fill;
+  width: $box-size;
+  height: $box-size;
+  margin: auto;
+  background: $codepen-logo-path2 no-repeat 50% / 80% rgba(#000, .1) ;
   color: $main-color;
 
   box-shadow: inset 0 0 0 1px rgba($main-color, .5);
