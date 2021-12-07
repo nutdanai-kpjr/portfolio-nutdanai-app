@@ -11,6 +11,7 @@
 // }
 
 .flipper {
+  width: 100%;
   height: 100%;
   transition: 1s;
   transform-style: preserve-3d;
@@ -65,7 +66,7 @@
 
 .hero-section{
   height: 530px;
-  width: 400px;
+  width: 530px;
 
   margin-bottom: 30px;
   h2 {
@@ -93,18 +94,26 @@
 }
 
 .image {
+  // height: 500px;
+  // width: 500px;
+
   width: 100%;
   height: 100%;
+  background-size:cover;
+// aspect-ratio: 1;
   background-repeat: no-repat;
+  border-radius: 10%;
+  // position: relative;
   background-position: center;
 }
 
 .image-1 {
-  background-image: url('/images/section-1.jpg');
+  
+  background-image: url('/images/me233.jpg');
 }
 
 .image-2 {
-  background-image: url('/images/section-2.jpg');
+  background-image: url('/images/me233.jpg');
 }
 
 
@@ -172,22 +181,24 @@
   position: absolute;
   top: 0;
   // box-shadow: -17px 13px 41px rgba(25,69,107,.6);
-  // border: 2px solid #11698E;
+  border: 2px solid #11698E;
   .shadow-inner {
     width: 100%;
     height: 100%;
-    box-shadow: -17px 13px 13px rgba(0,0,0,0.09);
+    // box-shadow: inset 0px 0px 20px  20px rgba(0,0,0,0.5);
+    // box-shadow: -17px 13px 13px rgba(0,0,0,0.09);
   }
-  border: 10px solid #d84848;
+  // border: 10px solid #303030;
 
 }
 
 .shadow-custom-orange {
-  border: 10px solid #d84848;
+  border: 10px solid #303030;
   .shadow-inner {
     width: 100%;
     height: 100%;
-    box-shadow: -17px 13px 13px rgba(0,0,0,0.09);
+    // box-shadow: inset 0px 0px 20px  20px rgba(0,0,0,0.5);
+    // box-shadow: -17px 13px 13px rgba(0,0,0,0.09);
   }
 
 }
@@ -213,3 +224,59 @@
 //   border: 2px solid #171717;
 //   // box-shadow: -17px 13px 41px rgba(13,78,158,0.3);
 // }
+
+
+$anime-time: 15s;
+
+$box-size: 400px;
+$clip-distance: .07;
+$clip-size: $box-size * (1 + $clip-distance * 2);
+$path-width: 5px;
+
+$main-color: #f0c048;
+
+$codepen-logo-path: url('/images/myicon.png');
+
+%full-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.bb {
+  @extend %full-fill;
+  width: $box-size;
+  height: $box-size;
+  margin: auto;
+  background: $codepen-logo-path no-repeat 50% / 80% rgba(#000, .1) ;
+  color: $main-color;
+
+  box-shadow: inset 0 0 0 1px rgba($main-color, .5);
+
+  &::before,
+  &::after {
+    @extend %full-fill;
+    content: '';
+    z-index: -1;
+    margin: -1 * $clip-distance * 100%;
+    box-shadow: inset 0 0 0 $path-width; 
+    animation: clipMe $anime-time linear infinite;
+  }
+
+  &::before {
+    animation-delay: $anime-time * -.5;
+  }
+
+  // for debug
+ 
+
+}
+
+@keyframes clipMe {
+  0%, 100% {clip: rect(0px, $clip-size, $path-width, 0px); }
+  25% {clip: rect(0px, $path-width, $clip-size, 0px); }
+  50% {clip: rect($clip-size - $path-width, $clip-size, $clip-size, 0px); }
+  75% {clip: rect(0px, $clip-size, $clip-size, $clip-size - $path-width); }
+}
