@@ -40,7 +40,7 @@ const Portfolios = ({portfolios: initialPortfolios}) => {
               // onClick={() => {
               //   router.push('/portfolios/[id]', `/portfolios/${portfolio._id}`)
               // }}
-              md="4" sm='7' >
+              md="6" sm='12' >
             
 
    
