@@ -27,6 +27,7 @@ const Portfolios = ({portfolios: initialPortfolios}) => {
   }
 
   return (
+
     <BaseLayout user={dataU} loading={loadingU}>
       <BasePage
         title="Newest Portfolios - Nutdanai Kitphermjaroen"
@@ -39,7 +40,10 @@ const Portfolios = ({portfolios: initialPortfolios}) => {
               onClick={() => {
                 router.push('/portfolios/[id]', `/portfolios/${portfolio._id}`)
               }}
-              md="4">
+              md="5" sm='7' >
+            
+
+   
               <PortfolioCard
                 portfolio={portfolio}>
                 { dataU && isAuthorized(dataU, 'admin') &&
