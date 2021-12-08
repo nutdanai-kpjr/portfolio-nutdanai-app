@@ -6,16 +6,16 @@ const PortfolioCard = ({portfolio,onClick, children}) =>
 <div class="face face1">
    <div class="content">
   
-      <h3>{portfolio.title}</h3>
+      <h3>{portfolio.title}(AS WELL AS THE ICON OF THE TECH STACK THAT U ARE USING)</h3>
    </div>
 </div>
 <div class="face face2">
    <div class="content">
    <img src={portfolio.companyWebsite}/>
-      <p>{portfolio.description}</p>
+      <p>{portfolio.description} </p>
       <br/>
       <p>I was {portfolio.jobTitle}</p>
-      <button onClick={onClick}>Read More </button>
+      <button onClick={onClick}>Read More (By geting Project PDF file) </button>
       {children}
    </div>
 </div>

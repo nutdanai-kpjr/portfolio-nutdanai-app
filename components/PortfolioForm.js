@@ -35,8 +35,37 @@ const PortfolioForm = ({onSubmit, initialData = {}}) => {
           className="form-control"
           id="title"/>
       </div>
+      <div className="form-group">
+        <label htmlFor="category">Category</label>
+        <input
+          ref={register}
+          name="category"
+          type="text"
+          className="form-control"
+          id="category"/>
+      </div>
+      <div className="form-group">
+        <label htmlFor="organization">Organization</label>
+        <input
+          ref={register}
+          name="organization"
+          type="text"
+          className="form-control"
+          id="organization"/>
+
+
+      </div>
 
       <div className="form-group">
+        <label htmlFor="techUsed">Tech Used</label>
+        <input
+          ref={register}
+          name="techUsed"
+          type="text"
+          className="form-control"
+          id="techUsed"/>
+      </div>
+      {/* <div className="form-group">
         <label htmlFor="city">Company</label>
         <input
           ref={register}
@@ -54,7 +83,7 @@ const PortfolioForm = ({onSubmit, initialData = {}}) => {
           type="text"
           className="form-control"
           id="companyWebsite"/>
-      </div>
+      </div> */}
 
       <div className="form-group">
         <label htmlFor="street">Location</label>
@@ -81,12 +110,37 @@ const PortfolioForm = ({onSubmit, initialData = {}}) => {
         <textarea
           ref={register}
           name="description"
-          rows="5"
           type="text"
           className="form-control"
           id="description">
         </textarea>
       </div>
+
+      <div className="form-group">
+        <label htmlFor="website">Website</label>
+        <input
+          ref={register}
+          name="website"
+          type="text"
+          className="form-control"
+          id="website"/>
+      </div>
+      <div className="form-group">
+        <label htmlFor="logoUrl">Logo Url</label>
+        <input
+          ref={register}
+          name="logoUrl"
+          type="text"
+          className="form-control"
+          id="logoUrl"/>
+      </div>
+  
+
+
+
+
+
+ 
 
       <div className="form-group">
         <label htmlFor="startDate">Start Date</label>

@@ -31,7 +31,7 @@ const Portfolios = ({portfolios: initialPortfolios}) => {
     <BaseLayout user={dataU} loading={loadingU}>
       <BasePage
         title="Newest Portfolios - Nutdanai Kitphermjaroen"
-        header="Portfolios"
+        header="Portfolios (SHOW TOTAL STATS HERE)"
         className="portfolio-page">
         <Row>
           { portfolios.map(portfolio =>
