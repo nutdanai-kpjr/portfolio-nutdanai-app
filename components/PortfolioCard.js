@@ -5,8 +5,9 @@ const PortfolioCard = ({portfolio,onClick, children}) =>
 <div class="port-card">
 <div class="face face1">
    <div class="content">
-  
-      <h3>{portfolio.title}(AS WELL AS THE ICON OF THE TECH STACK THAT U ARE USING)</h3>
+   <h5>{portfolio.category}</h5>
+      <h3>{portfolio.title}</h3>
+      <h5>{portfolio.techUsed}</h5>
    </div>
 </div>
 <div class="face face2">
@@ -15,7 +16,8 @@ const PortfolioCard = ({portfolio,onClick, children}) =>
       <p>{portfolio.description} </p>
       <br/>
       <p>I was {portfolio.jobTitle}</p>
-      <button onClick={onClick}>Read More (By geting Project PDF file) </button>
+      <a href={portfolio.website} target="_" >Read More</a>
+      {/* <button onClick={onClick}>Read More </button> */}
       {children}
    </div>
 </div>

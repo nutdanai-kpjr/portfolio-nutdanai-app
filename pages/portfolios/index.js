@@ -31,7 +31,7 @@ const Portfolios = ({portfolios: initialPortfolios}) => {
     <BaseLayout user={dataU} loading={loadingU}>
       <BasePage
         title="Newest Portfolios - Nutdanai Kitphermjaroen"
-        header="Portfolios (SHOW TOTAL STATS HERE)"
+        header="Portfolios"
         className="portfolio-page">
         <Row>
           { portfolios.map(portfolio =>
@@ -40,7 +40,7 @@ const Portfolios = ({portfolios: initialPortfolios}) => {
               // onClick={() => {
               //   router.push('/portfolios/[id]', `/portfolios/${portfolio._id}`)
               // }}
-              md="6" sm='12' >
+            md="6" sm='12' >
             
 
    
