@@ -37,27 +37,31 @@ const Portfolios = ({portfolios: initialPortfolios}) => {
           { portfolios.map(portfolio =>
             <Col
               key={portfolio._id}
-              onClick={() => {
-                router.push('/portfolios/[id]', `/portfolios/${portfolio._id}`)
-              }}
-              md="5" sm='7' >
+              // onClick={() => {
+              //   router.push('/portfolios/[id]', `/portfolios/${portfolio._id}`)
+              // }}
+              md="4" sm='7' >
             
 
    
               <PortfolioCard
+                   onClick={() => {
+                    router.push('/portfolios/[id]', `/portfolios/${portfolio._id}`)
+                  }}
                 portfolio={portfolio}>
+              
                 { dataU && isAuthorized(dataU, 'admin') &&
                   <>
-                    <Button
+                    <button
                       onClick={(e) => {
                         e.stopPropagation();
                         router.push('/portfolios/[id]/edit', `/portfolios/${portfolio._id}/edit`)
                       }}
-                      className="mr-2"
-                      color="warning">Edit</Button>
-                    <Button
+                   
+                    >Edit</button>
+                    <button
                       onClick={(e) => _deletePortfolio(e, portfolio._id)}
-                      color="danger">Delete</Button>
+                     >Delete</button>
                   </>
                 }
               </PortfolioCard>

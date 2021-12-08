@@ -1,18 +1,22 @@
 
 import { Card, CardHeader, CardBody, CardText, CardTitle } from 'reactstrap';
 
-const PortfolioCard = ({portfolio, children}) =>
+const PortfolioCard = ({portfolio,onClick, children}) =>
 <div class="port-card">
 <div class="face face1">
    <div class="content">
-      {/* <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/design_128.png?raw=true"/> */}
+  
       <h3>{portfolio.title}</h3>
    </div>
 </div>
 <div class="face face2">
    <div class="content">
+   <img src={portfolio.companyWebsite}/>
       <p>{portfolio.description}</p>
-      <a href="#">Read More</a>
+      <br/>
+      <p>I was {portfolio.jobTitle}</p>
+      <button onClick={onClick}>Read More </button>
+      {children}
    </div>
 </div>
 </div>
