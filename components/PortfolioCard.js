@@ -2,16 +2,16 @@
 import { Card, CardHeader, CardBody, CardText, CardTitle } from 'reactstrap';
 
 const PortfolioCard = ({portfolio,onClick, children}) =>
-<div class="port-card">
-<div class="face face1">
-   <div class="content">
+<div className="port-card">
+<div className="face face1">
+   <div className="content">
    <h5>{portfolio.category}</h5>
       <h3>{portfolio.title}</h3>
       <h5>{portfolio.techUsed}</h5>
    </div>
 </div>
-<div class="face face2">
-   <div class="content">
+<div className="face face2">
+   <div className="content">
    <img src={portfolio.logoUrl}/>
       <p>{portfolio.description} </p>
       <br/>
@@ -22,12 +22,12 @@ const PortfolioCard = ({portfolio,onClick, children}) =>
    </div>
 </div>
 </div>
-  // <Card className="portfolio-card">
-  //   <CardHeader className="portfolio-card-header">{portfolio.jobTitle}</CardHeader>
+  // <Card classn<div classNameName="portfolio-card">
+  //   <CardHeader classn<div classNameName="portfolio-card-header">{portfolio.jobTitle}</CardHeader>
   //   <CardBody>
-  //     <p className="portfolio-card-city">{portfolio.location}</p>
-  //     <CardTitle className="portfolio-card-title">{portfolio.title}</CardTitle>
-  //     <CardText className="portfolio-card-text">{portfolio.description}</CardText>
+  //     <p classn<div classNameName="portfolio-card-city">{portfolio.location}</p>
+  //     <CardTitle classn<div classNameName="portfolio-card-title">{portfolio.title}</CardTitle>
+  //     <CardText classn<div classNameName="portfolio-card-text">{portfolio.description}</CardText>
   //     {children}
   //   </CardBody>
   // </Card>
