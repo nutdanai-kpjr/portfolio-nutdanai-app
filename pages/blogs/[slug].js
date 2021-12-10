@@ -19,8 +19,8 @@ const BlogDetail = ({blog, author}) => {
         <Row>
           <Col md={{size: 8, offset: 2}}>
             <Avatar
-              title={author.name}
-              image={author.picture}
+              title='Nutdanai'
+              image="/images/myicon4.png"
               date={blog.createdAt}
             />
             <hr/>
