@@ -12,7 +12,7 @@ const PortfolioCard = ({portfolio,onClick, children}) =>
 </div>
 <div class="face face2">
    <div class="content">
-   <img src={portfolio.companyWebsite}/>
+   <img src={portfolio.logoUrl}/>
       <p>{portfolio.description} </p>
       <br/>
       <p>I was {portfolio.jobTitle}</p>

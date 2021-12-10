@@ -35,17 +35,18 @@ const About = () => {
               <h1 className={`title ${createFadeInClass()}`}>Hello, Welcome</h1>
               <h4 className={`subtitle ${createFadeInClass()}`}>To About Page</h4>
               <p className={`subsubTitle ${createFadeInClass()}`}>Here is a short description about me.</p>
+         
             </div>
           </Col>
           <Col md="6">
             <div className={`${createFadeInClass()}`}>
               <p>My name is Nutdanai Kitphermjaroen. I am CS student who interested in using web and mobile applications to improve people's well-being. </p>
               <p>
-              As an undergraduate student studying computer science, I have developed web and mobile applications both for my personal interests and for university projects over the last 3 years since 2019.
+              As an undergraduate student studying computer science, I have developed web and mobile applications both for my personal interests and for university projects since 2019.
               </p>
 
-              <p>Speaking of my own interests, my passion is to design and create the app that will help me (as well as others) grow up.
-              You can check out my portfolio on this site to see some of my projects in the self-development field.</p>
+             
+  
          
             </div>
           </Col>
