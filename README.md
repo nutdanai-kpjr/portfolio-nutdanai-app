@@ -1,4 +1,15 @@
-# portfolio-jerga-app
+# portfolio-nutdanai-app
+This portfolio is the modified version of the <a href="https://github.com/Jerga99/portfolio-jerga-app">portfolio-jerga-app repository</a> from the following Udemy Course :  
+<a href="https://www.udemy.com/course/awesome-nextjs-with-react-and-node-amazing-portfolio-app/" > Complete Next.js with React & Node - Beautiful Portfolio App </a>  
+A big thank you to Jerga for creating such a beautiful and iconic Portfolio Website :) 
+  
+  
+  
+  
+<br/><br/>
+ORIGINAL README  
+
+
 Next.js Serverless App - Udemy course material
 
 
